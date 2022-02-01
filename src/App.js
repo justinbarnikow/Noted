@@ -63,10 +63,59 @@ export default class App extends Component {
     })
   }
 
+  handleEditListTitle = (e, listId) => {
+    e.preventDefault()
+    const { lists, allCards } = this.state.store;
+    const newLists = lists.map(list => {
+      if(list.id === listId) {
+        return {...list, header: e.target.listTitle.value}
+      }
+      return list
+    })
+    this.setState({
+      store: {
+        lists: newLists,
+        allCards: allCards
+      }
+    })
+  }
+
+  handleEditCardTitle = (e, cardId) => {
+    e.preventDefault()
+    const {lists, allCards} = this.state.store
+    Object.entries(allCards).forEach((entry) => {
+      const [key, value] = entry;
+      if (key === cardId) {
+        value.title = e.target.cardTitle.value
+      }
+    })
+    this.setState({
+      store: {
+        lists: this.state.store.lists,
+        allCards: this.state.store.allCards
+      }
+    })
+  }
+
+  handleEditCardContent = (e, cardId) => {
+    e.preventDefault();
+    const {lists, allCards} = this.state.store
+    Object.entries(allCards).forEach((entry) => {
+      const [key, value] = entry;
+      if (key === cardId) {
+        value.content = e.target.cardContent.value
+      }
+    })
+    this.setState({
+      store: {
+        lists: this.state.store.lists,
+        allCards: this.state.store.allCards
+      }
+    })
+  }
+
   render() {
-
     const {store} = this.state
-
     return (
       <main className='App'>
         <header>
@@ -82,6 +131,9 @@ export default class App extends Component {
                 cards={list.cardIds.map(id => store.allCards[id])}
                 addCard={this.handleNewCard}
                 deleteCard={this.handleDeleteCard}
+                editListTitle={this.handleEditListTitle}
+                editCardTitle={this.handleEditCardTitle}
+                editCardContent={this.handleEditCardContent}
               />
           ))}
         </div>

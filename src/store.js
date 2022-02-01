@@ -1,9 +1,9 @@
-export default {
+const store = {
     lists: [
       {
         id: '1',
         header: 'First list',
-        cardIds: [ 'a', 'b', 'e', 'f', 'g', 'j', 'l', 'm' ],
+        cardIds: [ 'a', 'b', 'e' ],
       },
       {
         id: '2',
@@ -37,3 +37,5 @@ export default {
       'm': { id: 'm', title: 'Thirteenth card', content: 'lorem ipsum' },
     },
   }
+
+  export default store
