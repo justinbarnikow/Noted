@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import {FaStar, FaTrashAlt} from 'react-icons/fa'
 
 function Card(props) {
 
     const [isEditingTitle, setIsEditingTitle] = useState(false)
     const [isEditingContent, setIsEditingContent] = useState(false)
+    const [isHighlighted, setIsHighlighted] = useState(false)
 
   return (
       <div className='Card'>
@@ -18,6 +20,18 @@ function Card(props) {
               <h3 onClick={() => setIsEditingTitle(true)}>{props.title}</h3>
           }
           {
+              isHighlighted ?
+              <span className='star_highlighted' style={{ color: 'yellow'}}>
+                  <FaStar onClick={() => setIsHighlighted(false)}/>
+              </span> :
+              <span className='star_highlighted'>
+                <FaStar onClick={() => setIsHighlighted(true)}/>
+            </span>
+          }
+          <button type='button' onClick={() => props.deleteCard(props.id)}>
+              <FaTrashAlt />
+          </button>
+          {
               isEditingContent ?
               <form onSubmit={(e) => {
                   props.editCardContent(e, props.id)
@@ -28,9 +42,6 @@ function Card(props) {
               </form> :
               <p onClick={() => setIsEditingContent(true)}>{props.content}</p>
           }
-          <button type='button' onClick={() => props.deleteCard(props.id)}>
-              Delete Card
-          </button>
       </div>
   );
 }

@@ -47,6 +47,22 @@ export default class App extends Component {
     })
   }
 
+  handleNewList = () => {
+    const {lists, allCards} = this.state.store
+    const id = uuidv4()
+    const newList = {
+      id,
+      header: 'New List',
+      cardIds: []
+    }
+    this.setState({
+      store: {
+        lists: [...lists, newList],
+        allCards:allCards
+      }
+    })
+  }
+
   handleDeleteCard = (cardId) => {
     const { lists, allCards } = this.state.store;
     const newLists = lists.map(list => ({
@@ -59,6 +75,28 @@ export default class App extends Component {
       store: {
         lists: newLists,
         allCards: newCards
+      }
+    })
+  }
+
+  handleDeleteList = (listId) => {
+    const { lists, allCards } = this.state.store;
+    const newLists = lists.filter(function(list) {
+      return list.id !== listId
+    })
+    this.setState({
+      store: {
+        lists: newLists,
+        allCards: allCards
+      }
+    })
+  }
+
+  handleClearAll = () => {
+    this.setState({ 
+      store: {
+        lists: [],
+        allCards: {}
       }
     })
   }
@@ -82,7 +120,7 @@ export default class App extends Component {
 
   handleEditCardTitle = (e, cardId) => {
     e.preventDefault()
-    const {lists, allCards} = this.state.store
+    const allCards = this.state.store.allCards
     Object.entries(allCards).forEach((entry) => {
       const [key, value] = entry;
       if (key === cardId) {
@@ -99,7 +137,7 @@ export default class App extends Component {
 
   handleEditCardContent = (e, cardId) => {
     e.preventDefault();
-    const {lists, allCards} = this.state.store
+    const allCards = this.state.store.allCards
     Object.entries(allCards).forEach((entry) => {
       const [key, value] = entry;
       if (key === cardId) {
@@ -122,6 +160,14 @@ export default class App extends Component {
           <h1>Noted</h1>
           <h2>the only list app you need</h2>
         </header>
+        <div className='button_area'>
+          <button type='button' onClick={() => this.handleNewList()}>
+            New List
+          </button>
+          <button type='button' onClick={() => this.handleClearAll()}>
+            Clear All
+          </button>
+        </div>
         <div className='App-list'>
           {store.lists.map(list => (
               <List 
@@ -131,6 +177,7 @@ export default class App extends Component {
                 cards={list.cardIds.map(id => store.allCards[id])}
                 addCard={this.handleNewCard}
                 deleteCard={this.handleDeleteCard}
+                deleteList={this.handleDeleteList}
                 editListTitle={this.handleEditListTitle}
                 editCardTitle={this.handleEditCardTitle}
                 editCardContent={this.handleEditCardContent}
