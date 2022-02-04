@@ -1,9 +1,35 @@
-.List {
-    border: 2px solid blue;
-    width: 350px;
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
-.Card {
-    border: 2px solid green;
-    width: 300px;
+body {
+    min-height: 100vh;
+    display: flex;
+}
+
+#root {
+    /*flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;*/
+}
+
+.App {
+    color: black;
+    background-color: #5ebec4;
+    font-size: 1.05rem;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /*align-items: center;*/
+    border: 1px solid #FF6864;
+    min-width: 100vw;
+}
+
+.App-list {
+    display: flex;
 }

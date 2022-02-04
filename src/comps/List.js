@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Card from './Card';
 import {FaEye, FaTrashAlt} from 'react-icons/fa'
+import '../Style/List.css'
 
 function List(props) {
 

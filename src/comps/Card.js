@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {FaStar, FaTrashAlt} from 'react-icons/fa'
+import '../Style/Card.css'
 
 function Card(props) {
 

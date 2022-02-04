@@ -45,6 +45,9 @@ export default class App extends Component {
         }
       }
     })
+    Array.from(document.querySelectorAll('input')).forEach(
+      input => (input.value = "")
+    );
   }
 
   handleNewList = () => {

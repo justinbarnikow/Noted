@@ -2,22 +2,22 @@ const store = {
     lists: [
       {
         id: '1',
-        header: 'First list',
+        header: 'To Do (home)',
         cardIds: [ 'a', 'b', 'e' ],
       },
       {
         id: '2',
-        header: 'Second list',
+        header: 'To Do (work)',
         cardIds: ['b', 'c', 'd', 'f', 'h', 'i', 'k'],
       },
       {
         id: '3',
-        header: 'Third list',
+        header: 'Groceries',
         cardIds: [ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm' ],
       },
       {
         id: '4',
-        header: 'Fourth list',
+        header: 'Chores',
         cardIds: [ 'l', 'm' ],
       },
     ],
