@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@400;500&display=swap');
 * {
     margin: 0px;
     padding: 0px;
@@ -18,7 +19,6 @@ body {
 
 .App {
     color: black;
-    background-color: #5ebec4;
     font-size: 1.05rem;
     width: 100%;
     min-height: 100vh;
@@ -26,10 +26,97 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     /*align-items: center;*/
-    border: 1px solid #FF6864;
     min-width: 100vw;
+    background-image: linear-gradient(120deg, #304352   , #d7d2cc);
+    font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 .App-list {
+    display: flex; 
+    padding-left: 5px;
+}
+
+header {
+    border-bottom: 2px solid rgb(255, 132, 0);
+    color:rgb(255, 132, 0);
+    font-size: 36px;
+    background-color: rgba(0, 0, 0, 0.22);
     display: flex;
+}
+
+h1 {
+font-size: 2.5rem;
+text-shadow: 0px 0px 1px white;
+padding-top: 5px;
+}
+
+.logo {
+    font-size: 36px;
+    color:rgb(255, 132, 0);
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+}
+
+.newList, .clearAll {
+    font-size: 18px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    background-color: rgba(104, 108, 150, 0.39);
+    color: rgb(255, 132, 0);
+}
+
+.newList:hover, .clearAll:hover {
+    background-color: rgba(255, 255, 255, 0.165);
+}
+
+.button_area {
+    padding: 5px 5px
+}
+
+.trash_button {
+    background-color: inherit;
+    border: none;
+    padding-left: 5px;
+    color: rgb(67, 67, 67);
+    opacity: .85;
+}
+
+.trash_button:hover {
+    opacity: 1;
+}
+
+.List_title, .Card_title {
+    padding: 3px 5px
+}
+
+.listCheck {
+    color: rgb(1, 150, 1);
+}
+
+.listCancel {
+    color: red
+}
+
+.listCheck:hover, .listCancel:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+}
+
+.Card_titleForm button, .List_titleForm button, .Card_contentForm button {
+    background-color: inherit;
+    border: none;
+    font-size: 16px;
+    margin: 0px 2px
+}
+
+input, textarea {
+    border-radius: 5px;
+    font-family: 'IBM Plex Sans Thai Looped', sans-serif;
 }

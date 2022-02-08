@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import List from './comps/List';
 import store from './store';
 import './App.css'
+import {GiNotebook} from 'react-icons/gi'
 import { v4 as uuidv4 } from 'uuid'
 
 function omit(obj, keyToOmit) {
@@ -21,7 +22,7 @@ export default class App extends Component {
   handleNewCard = (e, listId) => {
     e.preventDefault()
     const id = uuidv4()
-    const cardName = e.target.cardTitle.value
+    const cardName = e.target.addCardTitle.value
     const newCard = {
       id,
       title: `${cardName}`,
@@ -159,18 +160,21 @@ export default class App extends Component {
     const {store} = this.state
     return (
       <main className='App'>
+
         <header>
+          <GiNotebook className='logo' />
           <h1>Noted</h1>
-          <h2>the only list app you need</h2>
         </header>
+
         <div className='button_area'>
-          <button type='button' onClick={() => this.handleNewList()}>
+          <button type='button' onClick={() => this.handleNewList()} className='newList'>
             New List
           </button>
-          <button type='button' onClick={() => this.handleClearAll()}>
+          <button type='button' onClick={() => this.handleClearAll()} className='clearAll'>
             Clear All
           </button>
         </div>
+  
         <div className='App-list'>
           {store.lists.map(list => (
               <List 
@@ -187,6 +191,7 @@ export default class App extends Component {
               />
           ))}
         </div>
+
       </main>
       );
   }

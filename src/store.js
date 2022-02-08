@@ -3,22 +3,22 @@ const store = {
       {
         id: '1',
         header: 'To Do (home)',
-        cardIds: [ 'a', 'b', 'e' ],
+        cardIds: [ 'a', 'b'],
       },
       {
         id: '2',
         header: 'To Do (work)',
-        cardIds: ['b', 'c', 'd', 'f', 'h', 'i', 'k'],
+        cardIds: ['b', 'c', 'd', 'f', 'h'],
       },
       {
         id: '3',
         header: 'Groceries',
-        cardIds: [ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm' ],
+        cardIds: [ 'a', 'b', 'd', 'f', 'g', 'h', 'i', 'j', 'k' ],
       },
       {
         id: '4',
         header: 'Chores',
-        cardIds: [ 'l', 'm' ],
+        cardIds: ['e', 'l', 'm' ],
       },
     ],
     allCards: {

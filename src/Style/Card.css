@@ -1,4 +1,51 @@
 .Card {
     border: 1px solid black;
-    width: 260px;
+    border-radius: 5px;
+    background-color: white;
+    width: 325px;
+    position: relative;
+    margin: 7px 0px;
+}
+
+.Card_title {
+    font-size: 18px;
+    font-weight: normal;
+    margin-top: 5px;
+    width: 275px;
+    font-weight: 500;
+}
+
+.Card_buttons {
+    position: absolute;
+    right: 10px;
+    padding: 3px
+}
+
+.Card_content {
+    margin: 5px 5px 10px 5px;
+    font-size: 16px;
+}
+
+.Card_title:hover, .Card_content:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+
+input[name="cardTitle"] {
+    padding: 3px 0px;
+    font-size: 18px;
+    margin: 6px 0px 4px 2px 
+}
+
+textarea {
+    height: 100px;
+    width: 80%;
+    font-size: 16px;
+    font-family: inherit;
+    margin: 5px;
+}
+
+.star_highlighted:hover, .star_lowlighted:hover, .trash_button:hover,
+.Card_title, .Card_content {
+    cursor: pointer;
 }

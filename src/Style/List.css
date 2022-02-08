@@ -1,5 +1,88 @@
 .List {
-    border: 3px solid black;
-    width: 275px;
+    width: 350px;
     height: 100%;
+    background-color: rgb(230, 230, 230);
+    margin: 0px 5px;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    position: relative;
+}  
+
+.List_title {
+    font-size: 18px;
+    font-weight: normal;
+    margin: 5px;
+    font-weight: bold;
+    width: 280px;
+}
+
+.List_title:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.List_title {
+    cursor: pointer;
+}
+
+.List_buttons {
+    position: absolute;
+    right: 10px;
+    padding: 3px;
+}
+
+.List-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[name="listTitle"] {
+    padding: 3px 0px;
+    font-size: 18px;
+    margin: 8px 0px 5px 7px;
+    width: 250px;
+}
+
+input[name="addCardTitle"] {
+    width: 325px;
+    padding: 3px 0px;
+    font-size: 18px;
+    margin: 12px;
+}
+
+.addCard_dropButton {
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 100px;
+    margin: auto;
+    margin-bottom: 10px;
+    padding: 5px 2px;
+}
+
+.addCard_dropButton:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.addCard_dropButton:hover, .eye_highlighted:hover {
+    cursor: pointer;
+}
+
+
+.addCard_button {
+    margin: 0px 15px 0px;
+    color: green;
+    background-color: inherit;
+}
+
+.addCard_cancel {
+    color: red;
+    background-color: inherit;
+}
+
+.addCard_button, .addCard_cancel {
+    font-size: 30px;
+    border: none;
 }
