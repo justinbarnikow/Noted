@@ -2,10 +2,10 @@
 https://noted-jb.vercel.app/
 
 ## Description
-Noted is a react-app that allows the user to create lists and notes. Create, label, edit and delete as many lists or cards as necessary, whether it be for reminders, to-do lists or whatever else you may need. Lists and cards can be prioritized by highlighted their 'watch' or 'star' symbol, respectively.
+Noted is a react-app that allows the user to create lists and notes. Create, label, edit and delete as many lists or cards as necessary, whether it be for reminders, to-do lists or whatever else you may need. Lists and cards can be prioritized by highlighting their 'watch' or 'star' symbol, respectively.
 
 ## Motivation
-I created Noted as a challenge to display my skills working through CRUD operations and manipulating data and local storage. I was inspired by an app, Trello, that I frequently use and find quite helpful for working on prejects such as these.
+I created Noted as a challenge to display my skills working through CRUD operations and manipulating data and local storage. I was inspired by an app, Trello, that I frequently use and find quite helpful for working on projects such as this.
 
 ## Built With
 * Javascript
@@ -16,8 +16,8 @@ I created Noted as a challenge to display my skills working through CRUD operati
 ## Features
 * create Lists 
 * create Cards for any individual List
-* highlight Lists and Cards to displa prioritization
-* edit the content and titles of all Lists and Cards by double-clicking item to edit
+* highlight Lists and Cards to display prioritization
+* edit the content and titles of all Lists and Cards by double-clicking the item to edit
 
 ## Screenshots
 ### Noted (filled)
